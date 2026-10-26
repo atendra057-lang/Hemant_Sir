@@ -60,6 +60,7 @@ export interface TeachingArea {
 
 export interface AcademicProfileData {
   name: BilingualText;
+  portraitUrl?: string;
   title: BilingualText;
   department: BilingualText;
   institution: BilingualText;

@@ -274,123 +274,39 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
                 <div style={{ position: 'absolute', bottom: '8px', left: '8px', width: '12px', height: '12px', borderBottom: '2px solid var(--color-gold)', borderLeft: '2px solid var(--color-gold)' }} />
                 <div style={{ position: 'absolute', bottom: '8px', right: '8px', width: '12px', height: '12px', borderBottom: '2px solid var(--color-gold)', borderRight: '2px solid var(--color-gold)' }} />
 
-                {/* Portrait or Archival Scholarly Seal */}
+                {/* Academic Photographic Portrait */}
                 <div
                   style={{
-                    aspectRatio: '4 / 5',
-                    backgroundColor: 'var(--color-forest)',
-                    borderRadius: '4px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    padding: '2rem 1.5rem',
-                    textAlign: 'center',
-                    border: '1px solid rgba(170, 146, 94, 0.4)',
                     position: 'relative',
+                    aspectRatio: '4 / 5',
+                    borderRadius: '4px',
                     overflow: 'hidden',
+                    border: '1px solid rgba(170, 146, 94, 0.4)',
+                    boxShadow: '0 8px 24px rgba(16, 39, 31, 0.18)',
+                    backgroundColor: 'var(--color-forest)',
                   }}
                 >
-                  {/* Subtle Background Radial & Watermark */}
+                  <img
+                    src={data.portraitUrl || '/portrait.jpg'}
+                    alt={lang === 'hi' ? data.name.hi : data.name.en}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'center 0%',
+                      display: 'block',
+                    }}
+                  />
+
+                  {/* Elegant Archival Inner Vignette Overlay */}
                   <div
                     style={{
                       position: 'absolute',
                       inset: 0,
-                      backgroundImage: 'radial-gradient(circle at center, rgba(170, 146, 94, 0.12) 0%, transparent 70%)',
+                      boxShadow: 'inset 0 0 28px rgba(16, 39, 31, 0.3)',
                       pointerEvents: 'none',
                     }}
                   />
-
-                  {/* Intertwined Monogram Crest */}
-                  <div
-                    style={{
-                      width: '110px',
-                      height: '110px',
-                      borderRadius: '50%',
-                      border: '2px solid var(--color-gold)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      position: 'relative',
-                      marginBottom: '1.25rem',
-                      boxShadow: '0 0 20px rgba(170, 146, 94, 0.25)',
-                      backgroundColor: 'var(--color-forest-dark)',
-                    }}
-                  >
-                    {/* Inner gold ring */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        inset: '4px',
-                        borderRadius: '50%',
-                        border: '1px dashed rgba(170, 146, 94, 0.6)',
-                      }}
-                    />
-                    <span
-                      style={{
-                        fontFamily: 'var(--font-devanagari)',
-                        fontSize: '3.2rem',
-                        fontWeight: 700,
-                        color: 'var(--color-gold-light)',
-                        lineHeight: 1,
-                        textShadow: '0 2px 4px rgba(0,0,0,0.5)',
-                      }}
-                    >
-                      ह
-                    </span>
-                  </div>
-
-                  {/* Scholarly Seal Inscription */}
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-serif)',
-                      fontSize: '1.18rem',
-                      fontWeight: 600,
-                      color: 'var(--color-ivory)',
-                      letterSpacing: '0.04em',
-                      marginBottom: '0.35rem',
-                    }}
-                  >
-                    हेमंत कुमार सिंह
-                  </div>
-
-                  <div
-                    style={{
-                      fontSize: '0.8rem',
-                      color: 'var(--color-gold-light)',
-                      letterSpacing: '0.06em',
-                      textTransform: 'uppercase',
-                      fontFamily: 'var(--font-sans)',
-                      fontWeight: 600,
-                      marginBottom: '1rem',
-                    }}
-                  >
-                    {lang === 'hi' ? 'सहायक प्राध्यापक · हिंदी' : 'Assistant Professor of Hindi'}
-                  </div>
-
-                  <div
-                    style={{
-                      width: '40px',
-                      height: '1px',
-                      backgroundColor: 'var(--color-gold)',
-                      opacity: 0.6,
-                      marginBottom: '1rem',
-                    }}
-                  />
-
-                  <div
-                    style={{
-                      fontSize: '0.76rem',
-                      color: 'rgba(246, 241, 231, 0.85)',
-                      fontFamily: 'var(--font-sans)',
-                      lineHeight: 1.5,
-                      maxWidth: '220px',
-                    }}
-                  >
-                    {lang === 'hi' 
-                      ? 'मोतीलाल नेहरू कॉलेज\nदिल्ली विश्वविद्यालय'
-                      : 'Motilal Nehru College\nUniversity of Delhi'}
-                  </div>
 
                   {/* Archival Stamp Ribbon at Bottom of Card */}
                   <div
@@ -399,18 +315,21 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
                       bottom: 0,
                       left: 0,
                       right: 0,
-                      backgroundColor: 'rgba(16, 39, 31, 0.95)',
-                      borderTop: '1px solid rgba(170, 146, 94, 0.3)',
-                      padding: '0.5rem 0.75rem',
-                      fontSize: '0.7rem',
+                      backgroundColor: 'rgba(16, 39, 31, 0.92)',
+                      backdropFilter: 'blur(6px)',
+                      borderTop: '1px solid rgba(170, 146, 94, 0.4)',
+                      padding: '0.48rem 0.75rem',
+                      fontSize: '0.72rem',
                       color: 'var(--color-gold-light)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      gap: '0.35rem',
+                      gap: '0.4rem',
+                      fontFamily: 'var(--font-sans)',
+                      letterSpacing: '0.02em',
                     }}
                   >
-                    <ShieldCheck size={13} style={{ color: 'var(--color-gold)' }} />
+                    <ShieldCheck size={14} style={{ color: 'var(--color-gold)' }} />
                     <span>MNC/BJM/2023/814 · Verified Faculty</span>
                   </div>
                 </div>
@@ -420,15 +339,27 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
                   style={{
                     marginTop: '0.85rem',
                     textAlign: 'center',
-                    fontSize: '0.78rem',
-                    color: 'var(--color-muted)',
+                    fontSize: '0.82rem',
+                    color: 'var(--color-forest-dark)',
                     fontFamily: 'var(--font-sans)',
-                    fontStyle: 'italic',
+                    fontWeight: 600,
                   }}
                 >
                   {lang === 'hi'
-                    ? 'अकादमिक मुद्रा · हिंदी विभाग, मोतीलाल नेहरू कॉलेज'
-                    : 'Faculty Crest · Department of Hindi, Motilal Nehru College'}
+                    ? 'हेमंत कुमार सिंह · सहायक प्राध्यापक'
+                    : 'Hemant Kumar Singh · Assistant Professor'}
+                  <div
+                    style={{
+                      fontSize: '0.74rem',
+                      color: 'var(--color-muted)',
+                      fontWeight: 400,
+                      marginTop: '2px',
+                    }}
+                  >
+                    {lang === 'hi'
+                      ? 'मोतीलाल नेहरू कॉलेज · दिल्ली विश्वविद्यालय'
+                      : 'Motilal Nehru College · University of Delhi'}
+                  </div>
                 </div>
               </div>
             </div>

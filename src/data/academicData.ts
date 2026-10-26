@@ -5,6 +5,7 @@ export const academicData: AcademicProfileData = {
     en: 'Hemant Kumar Singh',
     hi: 'हेमंत कुमार सिंह',
   },
+  portraitUrl: '/portrait.jpg',
   title: {
     en: 'Assistant Professor of Hindi',
     hi: 'सहायक प्राध्यापक, हिंदी विभाग',
