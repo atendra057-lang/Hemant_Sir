@@ -1,0 +1,5 @@
+# Robots.txt for Academic Portfolio of Shri Hemant Kumar Singh
+User-agent: *
+Allow: /
+
+Sitemap: https://hemantkumarsingh.ac.in/sitemap.xml
