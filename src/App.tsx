@@ -12,8 +12,27 @@ import { Footer } from './components/Footer';
 import { SourceVerificationDrawer } from './components/SourceVerificationDrawer';
 
 export const App: React.FC = () => {
-  const [lang, setLang] = useState<Language>('hi');
+  const [lang, setLang] = useState<Language>(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = params.get('lang');
+      return urlLang === 'en' ? 'en' : 'hi';
+    } catch {
+      return 'hi';
+    }
+  });
   const [isLedgerOpen, setIsLedgerOpen] = useState(false);
+
+  const handleLanguageChange = (newLang: Language) => {
+    setLang(newLang);
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', newLang);
+      window.history.replaceState({}, '', url.toString());
+    } catch {
+      // ignore
+    }
+  };
 
   // Sync html lang attribute
   useEffect(() => {
@@ -52,7 +71,7 @@ export const App: React.FC = () => {
       {/* Masthead Header */}
       <Header
         lang={lang}
-        onLanguageChange={setLang}
+        onLanguageChange={handleLanguageChange}
         onOpenLedger={() => setIsLedgerOpen(true)}
       />
 

@@ -72,20 +72,38 @@ export const Header: React.FC<HeaderProps> = ({
           backgroundColor: 'var(--color-forest-dark)',
           color: 'var(--color-parchment)',
           borderBottom: '1px solid rgba(170, 146, 94, 0.25)',
-          fontSize: '0.8rem',
-          letterSpacing: '0.04em',
-          padding: '0.35rem 1rem',
+          padding: '0.35rem 0',
           fontFamily: 'var(--font-sans)',
         }}
       >
-        <div className="container-academic" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-            <span style={{ color: 'var(--color-gold-light)', fontWeight: 600 }}>
-              {lang === 'hi' ? 'मोतीलाल नेहरू कॉलेज' : 'MOTILAL NEHRU COLLEGE'}
+        <div 
+          className="container-academic top-strip-container" 
+          style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            gap: '0.4rem',
+          }}
+        >
+          <div 
+            style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: 'clamp(0.2rem, 1vw, 0.45rem)', 
+              whiteSpace: 'nowrap', 
+              overflow: 'hidden',
+              fontSize: 'clamp(0.64rem, 2.1vw, 0.78rem)',
+              letterSpacing: '0.02em',
+              minWidth: 0,
+              flexShrink: 1,
+            }}
+          >
+            <span style={{ color: 'var(--color-gold-light)', fontWeight: 600, whiteSpace: 'nowrap' }}>
+              {lang === 'hi' ? 'मोतीलाल नेहरू कॉलेज' : 'Motilal Nehru College'}
             </span>
-            <span style={{ opacity: 0.6 }}>·</span>
-            <span style={{ opacity: 0.85 }}>
-              {lang === 'hi' ? 'दिल्ली विश्वविद्यालय' : 'UNIVERSITY OF DELHI'}
+            <span style={{ opacity: 0.6, flexShrink: 0 }}>·</span>
+            <span style={{ opacity: 0.9, whiteSpace: 'nowrap' }}>
+              {lang === 'hi' ? 'दिल्ली विश्वविद्यालय' : 'University of Delhi'}
             </span>
           </div>
 
@@ -99,18 +117,20 @@ export const Header: React.FC<HeaderProps> = ({
               cursor: 'pointer',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.35rem',
-              fontSize: '0.78rem',
+              gap: '0.3rem',
+              fontSize: 'clamp(0.65rem, 2vw, 0.76rem)',
               fontWeight: 500,
-              padding: '2px 6px',
+              padding: '2px 4px',
               borderRadius: '2px',
               transition: 'var(--transition-gentle)',
+              whiteSpace: 'nowrap',
+              flexShrink: 0,
             }}
             title={lang === 'hi' ? 'शोध एवं स्रोत प्रामाणिकता विवरण' : 'View Scholarly Source Verification Ledger'}
             aria-label={lang === 'hi' ? 'शोध एवं स्रोत प्रामाणिकता विवरण' : 'View Scholarly Source Verification Ledger'}
           >
-            <ShieldCheck size={14} style={{ color: 'var(--color-gold)' }} />
-            <span>{lang === 'hi' ? 'सत्यापित स्रोत' : 'Verified Records'}</span>
+            <ShieldCheck size={13} style={{ color: 'var(--color-gold)', flexShrink: 0 }} />
+            <span style={{ whiteSpace: 'nowrap' }}>{lang === 'hi' ? 'सत्यापित स्रोत' : 'Verified Records'}</span>
           </button>
         </div>
       </div>
@@ -129,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({
           transition: 'all 0.3s ease',
         }}
       >
-        <div className="container-academic" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: 'var(--header-height)' }}>
+        <div className="container-academic main-header-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: 'var(--header-height)', gap: '0.5rem' }}>
           {/* Typographic Masthead Monogram & Name */}
           <a
             href="#home"
@@ -137,15 +157,17 @@ export const Header: React.FC<HeaderProps> = ({
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.85rem',
+              gap: 'clamp(0.5rem, 1.8vw, 0.85rem)',
               color: 'inherit',
+              minWidth: 0,
+              flexShrink: 1,
             }}
             aria-label="Hemant Kumar Singh Academic Portfolio"
           >
             <div
               style={{
-                width: '42px',
-                height: '42px',
+                width: 'clamp(34px, 8.5vw, 42px)',
+                height: 'clamp(34px, 8.5vw, 42px)',
                 backgroundColor: 'var(--color-forest)',
                 border: '1.5px solid var(--color-gold)',
                 borderRadius: '3px',
@@ -155,22 +177,23 @@ export const Header: React.FC<HeaderProps> = ({
                 color: 'var(--color-ivory)',
                 fontFamily: 'var(--font-devanagari)',
                 fontWeight: 700,
-                fontSize: '1.25rem',
+                fontSize: 'clamp(1.05rem, 2.8vw, 1.25rem)',
                 flexShrink: 0,
                 boxShadow: '0 2px 8px rgba(25, 55, 45, 0.15)',
               }}
             >
               ह
             </div>
-            <div>
+            <div style={{ minWidth: 0 }}>
               <div
                 style={{
                   fontFamily: 'var(--font-devanagari)',
                   fontWeight: 700,
-                  fontSize: '1.18rem',
+                  fontSize: 'clamp(0.96rem, 3.1vw, 1.18rem)',
                   lineHeight: 1.2,
                   color: 'var(--color-forest-dark)',
                   letterSpacing: '0.01em',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 हेमंत कुमार सिंह
@@ -178,10 +201,11 @@ export const Header: React.FC<HeaderProps> = ({
               <div
                 style={{
                   fontFamily: 'var(--font-serif)',
-                  fontSize: '0.88rem',
+                  fontSize: 'clamp(0.72rem, 2.3vw, 0.88rem)',
                   color: 'var(--color-muted)',
-                  letterSpacing: '0.02em',
+                  letterSpacing: '0.01em',
                   lineHeight: 1.2,
+                  whiteSpace: 'nowrap',
                 }}
               >
                 Hemant Kumar Singh
@@ -224,7 +248,7 @@ export const Header: React.FC<HeaderProps> = ({
           </nav>
 
           {/* Right Action: Language Switcher & Mobile Toggle */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(0.35rem, 1.4vw, 0.75rem)', flexShrink: 0 }}>
             {/* Language Switcher */}
             <div
               style={{
@@ -247,13 +271,13 @@ export const Header: React.FC<HeaderProps> = ({
                   color: lang === 'hi' ? 'var(--color-ivory)' : 'var(--color-ink)',
                   border: 'none',
                   borderRadius: '2px',
-                  padding: '4px 10px',
-                  fontSize: '0.82rem',
+                  padding: '3px clamp(5px, 1.5vw, 10px)',
+                  fontSize: 'clamp(0.72rem, 1.8vw, 0.82rem)',
                   fontWeight: 600,
                   cursor: 'pointer',
                   transition: 'var(--transition-gentle)',
                   fontFamily: 'var(--font-devanagari)',
-                  minHeight: '34px',
+                  minHeight: '30px',
                 }}
                 aria-pressed={lang === 'hi'}
               >
@@ -268,13 +292,13 @@ export const Header: React.FC<HeaderProps> = ({
                   color: lang === 'en' ? 'var(--color-ivory)' : 'var(--color-ink)',
                   border: 'none',
                   borderRadius: '2px',
-                  padding: '4px 10px',
-                  fontSize: '0.82rem',
+                  padding: '3px clamp(5px, 1.5vw, 10px)',
+                  fontSize: 'clamp(0.72rem, 1.8vw, 0.82rem)',
                   fontWeight: 600,
                   cursor: 'pointer',
                   transition: 'var(--transition-gentle)',
                   fontFamily: 'var(--font-sans)',
-                  minHeight: '34px',
+                  minHeight: '30px',
                 }}
                 aria-pressed={lang === 'en'}
               >
@@ -291,20 +315,23 @@ export const Header: React.FC<HeaderProps> = ({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                minWidth: '44px',
-                minHeight: '44px',
+                minWidth: '38px',
+                minHeight: '38px',
+                width: '38px',
+                height: '38px',
                 background: 'transparent',
                 border: '1px solid var(--color-border)',
                 borderRadius: '3px',
                 color: 'var(--color-forest)',
                 cursor: 'pointer',
+                transition: 'var(--transition-gentle)',
               }}
               className="mobile-toggle-btn"
               aria-label={mobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation-drawer"
             >
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -450,6 +477,13 @@ export const Header: React.FC<HeaderProps> = ({
           }
           .mobile-toggle-btn {
             display: none !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .container-academic.top-strip-container,
+          .container-academic.main-header-container {
+            padding-left: 0.75rem !important;
+            padding-right: 0.75rem !important;
           }
         }
         .nav-link-hover::after {
