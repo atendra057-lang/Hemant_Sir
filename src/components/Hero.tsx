@@ -165,7 +165,6 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
 
             {/* Primary Action Controls */}
             <div
-              className="hero-action-controls"
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',
@@ -174,13 +173,13 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
                 alignItems: 'center',
               }}
             >
-              <a href="#research" className="btn-academic-primary hero-action-btn">
+              <a href="#research" className="btn-academic-primary">
                 <BookOpen size={18} />
                 <span>{lang === 'hi' ? 'शोध कार्य देखें' : 'Explore Research'}</span>
                 <ArrowRight size={16} />
               </a>
 
-              <a href="#about" className="btn-academic-secondary hero-action-btn">
+              <a href="#about" className="btn-academic-secondary">
                 <FileText size={18} />
                 <span>{lang === 'hi' ? 'अकादमिक परिचय' : 'Academic Profile'}</span>
               </a>
@@ -188,7 +187,6 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
               <button
                 type="button"
                 onClick={onOpenLedger}
-                className="hero-citation-btn"
                 style={{
                   background: 'none',
                   border: 'none',
@@ -443,41 +441,6 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
         @media (min-width: 960px) {
           .hero-grid {
             grid-template-columns: 1.25fr 0.85fr;
-          }
-        }
-
-        /* Phone view only: stack the three action buttons one below the other */
-        @media (max-width: 640px) {
-          .hero-action-controls {
-            flex-direction: column !important;
-            align-items: stretch !important;
-            width: 100%;
-            gap: 0.75rem !important;
-          }
-          .hero-action-controls .hero-action-btn {
-            width: 100% !important;
-            box-sizing: border-box !important;
-            justify-content: center !important;
-            text-align: center !important;
-          }
-          .hero-action-controls .hero-citation-btn {
-            width: 100% !important;
-            box-sizing: border-box !important;
-            justify-content: center !important;
-            text-align: center !important;
-            margin-left: 0 !important;
-            min-height: 44px !important;
-            padding: 0.65rem 1rem !important;
-            border: 1px solid var(--color-border) !important;
-            border-radius: 3px !important;
-            background-color: var(--color-parchment-light) !important;
-            text-decoration: none !important;
-            font-size: 0.92rem !important;
-            color: var(--color-forest) !important;
-          }
-          .hero-action-controls .hero-citation-btn:hover {
-            border-color: var(--color-gold) !important;
-            background-color: rgba(170, 146, 94, 0.15) !important;
           }
         }
       `}</style>
