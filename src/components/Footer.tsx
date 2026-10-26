@@ -218,7 +218,7 @@ export const Footer: React.FC<FooterProps> = ({ data, lang, onOpenLedger }) => {
           }}
         >
           <div>
-            © {new Date().getFullYear()} श्री हेमंत कुमार सिंह (Shri Hemant Kumar Singh). All Rights Reserved.
+            © {new Date().getFullYear()} हेमंत कुमार सिंह (Hemant Kumar Singh). All Rights Reserved.
             <div style={{ fontSize: '0.75rem', marginTop: '3px' }}>
               {lang === 'hi'
                 ? 'अकादमिक सत्यनिष्ठा और दिल्ली विश्वविद्यालय मानकों के अनुरूप निर्मित।'

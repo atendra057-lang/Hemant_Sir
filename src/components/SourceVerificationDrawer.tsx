@@ -99,8 +99,8 @@ export const SourceVerificationDrawer: React.FC<SourceVerificationDrawerProps> =
       status: 'VERIFIED',
       type: { en: 'College Event Proceedings', hi: 'कॉलेज आयोजन प्रतिवेदन' },
       details: {
-        en: 'Organized on World Hindi Day by B.A. Programme Society Rachnayan & SEC Writers Forum. Shri Hemant Kumar Singh served as the programme moderator.',
-        hi: 'विश्व हिंदी दिवस पर रचनायन एवं सैक राइटर्स फोरम द्वारा आयोजित। श्री हेमंत कुमार सिंह द्वारा कार्यक्रम का कुशल संचालन।',
+        en: 'Organized on World Hindi Day by B.A. Programme Society Rachnayan & SEC Writers Forum. Hemant Kumar Singh served as the programme moderator.',
+        hi: 'विश्व हिंदी दिवस पर रचनायन एवं सैक राइटर्स फोरम द्वारा आयोजित। हेमंत कुमार सिंह द्वारा कार्यक्रम का कुशल संचालन।',
       },
     },
     {

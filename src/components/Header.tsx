@@ -173,7 +173,7 @@ export const Header: React.FC<HeaderProps> = ({
                   letterSpacing: '0.01em',
                 }}
               >
-                श्री हेमंत कुमार सिंह
+                हेमंत कुमार सिंह
               </div>
               <div
                 style={{
@@ -184,7 +184,7 @@ export const Header: React.FC<HeaderProps> = ({
                   lineHeight: 1.2,
                 }}
               >
-                Shri Hemant Kumar Singh
+                Hemant Kumar Singh
               </div>
             </div>
           </a>
@@ -353,7 +353,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem', paddingBottom: '1rem', borderBottom: '1px solid var(--color-border)' }}>
               <div>
                 <div style={{ fontFamily: 'var(--font-devanagari)', fontWeight: 700, fontSize: '1.1rem', color: 'var(--color-forest-dark)' }}>
-                  श्री हेमंत कुमार सिंह
+                  हेमंत कुमार सिंह
                 </div>
                 <div style={{ fontSize: '0.8rem', color: 'var(--color-muted)' }}>
                   सहायक प्राध्यापक, हिंदी विभाग

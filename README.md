@@ -1,6 +1,6 @@
-# Academic Portfolio — Shri Hemant Kumar Singh
+# Academic Portfolio — Hemant Kumar Singh
 ### Assistant Professor of Hindi · Motilal Nehru College · University of Delhi
-### श्री हेमंत कुमार सिंह | सहायक प्राध्यापक, हिंदी विभाग, मोतीलाल नेहरू कॉलेज, दिल्ली विश्वविद्यालय
+### हेमंत कुमार सिंह | सहायक प्राध्यापक, हिंदी विभाग, मोतीलाल नेहरू कॉलेज, दिल्ली विश्वविद्यालय
 
 A production-grade, editorial academic portfolio website designed with intellectual seriousness, scholarly credibility, and traditional university press aesthetics.
 
@@ -8,7 +8,7 @@ A production-grade, editorial academic portfolio website designed with intellect
 
 ## 🏛️ Academic Identity & Affiliation
 
-- **Name:** Shri Hemant Kumar Singh (श्री हेमंत कुमार सिंह)
+- **Name:** Hemant Kumar Singh (हेमंत कुमार सिंह)
 - **Designation:** Assistant Professor of Hindi (सहायक प्राध्यापक, हिंदी)
 - **Department:** Department of Hindi (हिंदी विभाग)
 - **Institution:** Motilal Nehru College (मोतीलाल नेहरू कॉलेज)
@@ -89,5 +89,5 @@ npm run preview
 
 ## 📜 License & Copyright
 
-© 2026 Shri Hemant Kumar Singh. All Rights Reserved.  
+© 2026 Hemant Kumar Singh. All Rights Reserved.  
 Curated in accordance with academic integrity and University of Delhi standards.
