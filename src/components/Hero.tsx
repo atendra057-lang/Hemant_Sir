@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
                 }}
               >
                 <Landmark size={12} style={{ color: 'var(--color-gold)' }} />
-                <span>{lang === 'hi' ? 'दिल्ली विश्वविद्यालय' : 'UNIVERSITY OF DELHI'}</span>
+                <span>{lang === 'hi' ? 'दिल्ली विश्वविद्यालय (DU)' : 'UNIVERSITY OF DELHI (DU)'}</span>
               </span>
 
               <span
@@ -76,11 +76,11 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
                   fontFamily: 'var(--font-sans)',
                 }}
               >
-                {lang === 'hi' ? 'मोतीलाल नेहरू कॉलेज · हिंदी विभाग' : 'MOTILAL NEHRU COLLEGE · DEPT. OF HINDI'}
+                {lang === 'hi' ? 'मोतीलाल नेहरू कॉलेज (MNC) · हिंदी विभाग' : 'MOTILAL NEHRU COLLEGE (MNC) · DEPT. OF HINDI'}
               </span>
             </div>
 
-            {/* Prominent Bilingual Academic Name */}
+            {/* Prominent Bilingual Academic Name & Disambiguation */}
             <div>
               <h1
                 style={{
@@ -105,6 +105,18 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
                 }}
               >
                 {data.name.en}
+              </div>
+              <div
+                style={{
+                  fontSize: '0.84rem',
+                  color: 'var(--color-gold-dark)',
+                  fontFamily: 'var(--font-sans)',
+                  fontWeight: 600,
+                  letterSpacing: '0.03em',
+                  marginTop: '0.2rem',
+                }}
+              >
+                {lang === 'hi' ? 'हेमंत सिंह (डीयू) · मोतीलाल नेहरू कॉलेज' : 'Hemant Singh DU · Motilal Nehru College'}
               </div>
             </div>
 
@@ -288,7 +300,12 @@ export const Hero: React.FC<HeroProps> = ({ data, lang, onOpenLedger }) => {
                 >
                   <img
                     src={data.portraitUrl || '/portrait.jpg'}
-                    alt={lang === 'hi' ? data.name.hi : data.name.en}
+                    alt={lang === 'hi' ? 'हेमंत सिंह (हेमंत कुमार सिंह) — सहायक प्राध्यापक, हिंदी विभाग, मोतीलाल नेहरू कॉलेज, दिल्ली विश्वविद्यालय (DU)' : 'Hemant Singh DU — Assistant Professor of Hindi, Motilal Nehru College, University of Delhi'}
+                    title="Hemant Singh — Motilal Nehru College, University of Delhi (DU)"
+                    loading="eager"
+                    fetchPriority="high"
+                    width={400}
+                    height={500}
                     style={{
                       width: '100%',
                       height: '100%',

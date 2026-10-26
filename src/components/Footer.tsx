@@ -63,15 +63,15 @@ export const Footer: React.FC<FooterProps> = ({ data, lang, onOpenLedger }) => {
                   {data.name.hi}
                 </div>
                 <div style={{ fontFamily: 'var(--font-serif)', fontSize: '0.88rem', color: 'var(--color-gold-light)' }}>
-                  {data.name.en}
+                  {data.name.en} · Hemant Singh DU
                 </div>
               </div>
             </div>
 
             <div style={{ fontSize: '0.86rem', color: 'rgba(246, 241, 231, 0.85)', lineHeight: 1.6, maxWidth: '340px' }}>
               {data.title[lang]}<br />
-              {data.department[lang]}, {data.institution[lang]}<br />
-              {data.university[lang]}, नई दिल्ली
+              {data.department[lang]}, {data.institution[lang]} (MNC)<br />
+              {data.university[lang]} (DU), {lang === 'hi' ? 'नई दिल्ली' : 'New Delhi'}
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', color: 'var(--color-gold-light)' }}>

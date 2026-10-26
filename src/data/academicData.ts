@@ -45,8 +45,8 @@ export const academicData: AcademicProfileData = {
   },
   extendedBio: [
     {
-      en: 'Hemant Kumar Singh serves as an Assistant Professor in the Department of Hindi at Motilal Nehru College, University of Delhi, having been appointed on a permanent basis following selection committee proceedings notified on 28 October 2023.',
-      hi: 'हेमंत कुमार सिंह दिल्ली विश्वविद्यालय के मोतीलाल नेहरू कॉलेज में हिंदी विभाग के सहायक प्राध्यापक हैं। कॉलेज चयन समिति की 28 अक्टूबर 2023 की आधिकारिक अधिसूचना के उपरांत वे स्थाई पद पर कार्यरत हैं।',
+      en: 'Hemant Singh (officially recorded in institutional appointments as Hemant Kumar Singh) serves as an Assistant Professor in the Department of Hindi at Motilal Nehru College, University of Delhi (DU), having been appointed on a permanent basis following selection committee proceedings notified on 28 October 2023.',
+      hi: 'हेमंत सिंह (आधिकारिक संस्थागत अभिलेखों में हेमंत कुमार सिंह) दिल्ली विश्वविद्यालय (DU) के मोतीलाल नेहरू कॉलेज में हिंदी विभाग के सहायक प्राध्यापक हैं। कॉलेज चयन समिति की 28 अक्टूबर 2023 की आधिकारिक अधिसूचना (Ref. MNC/BJM/2023/814) के उपरांत वे स्थाई पद पर कार्यरत हैं।',
     },
     {
       en: 'His academic scholarship centers on the critical convergence between Hindi literature, emerging literary discourses of the twenty-first century, and contemporary visual culture—particularly Hindi cinema. His research interrogates how cinematic narrative functions as an active participant in literary dialogues, negotiating shifting representations of identity, marginality, and social transformation.',

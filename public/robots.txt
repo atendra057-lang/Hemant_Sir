@@ -1,5 +1,7 @@
-# Robots.txt for Academic Portfolio of Hemant Kumar Singh
+# Robots.txt for Academic Portfolio of Hemant Singh (Motilal Nehru College, University of Delhi)
 User-agent: *
 Allow: /
 
-Sitemap: https://hemantkumarsingh.ac.in/sitemap.xml
+# Canonical Sitemap Location
+Sitemap: https://hemantsingdu.vercel.app/sitemap.xml
+Host: https://hemantsingdu.vercel.app

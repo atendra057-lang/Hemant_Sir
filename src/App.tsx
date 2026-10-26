@@ -34,9 +34,14 @@ export const App: React.FC = () => {
     }
   };
 
-  // Sync html lang attribute
+  // Sync html lang attribute and dynamic search-optimized document title
   useEffect(() => {
     document.documentElement.lang = lang;
+    if (lang === 'hi') {
+      document.title = 'Hemant Singh DU | Motilal Nehru College — हेमंत कुमार सिंह | Hemant Kumar Singh, सहायक प्राध्यापक (हिंदी), दिल्ली विश्वविद्यालय';
+    } else {
+      document.title = 'Hemant Singh DU | Motilal Nehru College — Hemant Kumar Singh, Assistant Professor of Hindi, University of Delhi';
+    }
   }, [lang]);
 
   return (

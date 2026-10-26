@@ -99,11 +99,11 @@ export const Header: React.FC<HeaderProps> = ({
             }}
           >
             <span style={{ color: 'var(--color-gold-light)', fontWeight: 600, whiteSpace: 'nowrap' }}>
-              {lang === 'hi' ? 'मोतीलाल नेहरू कॉलेज' : 'Motilal Nehru College'}
+              {lang === 'hi' ? 'मोतीलाल नेहरू कॉलेज (MNC)' : 'Motilal Nehru College (MNC)'}
             </span>
             <span style={{ opacity: 0.6, flexShrink: 0 }}>·</span>
             <span style={{ opacity: 0.9, whiteSpace: 'nowrap' }}>
-              {lang === 'hi' ? 'दिल्ली विश्वविद्यालय' : 'University of Delhi'}
+              {lang === 'hi' ? 'दिल्ली विश्वविद्यालय (DU)' : 'University of Delhi (DU)'}
             </span>
           </div>
 

@@ -112,7 +112,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ data, lang }) =>
                   </h3>
                   <div style={{ fontSize: '0.94rem', color: 'var(--color-ink)', lineHeight: 1.6 }}>
                     <strong>{data.department[lang]}</strong><br />
-                    {data.institution[lang]} ({data.university[lang]})<br />
+                    {data.institution[lang]} (MNC), {data.university[lang]} (DU)<br />
                     {lang === 'hi'
                       ? 'बेनिटो हुआरेज़ मार्ग, साउथ कैंपस, नई दिल्ली 110021, भारत'
                       : 'Benito Juarez Marg, South Campus, New Delhi 110021, India'}
